@@ -65,6 +65,11 @@ describe('input validation', () => {
             const result = validateGitHubName('Test1-Person123');
             assert(result === true);
         });
+
+        it('for valid syntax: 123Test1-Person123', () => {
+            const result = validateGitHubName('123Test1-Person123');
+            assert(result === true);
+        });
     });
 });
 
